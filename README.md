@@ -3,6 +3,8 @@
 
 ## 目录简介
 ```
+│   common  
+│   res
 │   README.md
 ```
 
