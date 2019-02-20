@@ -5,6 +5,9 @@
 ## 自然推理
 ### 推理have/has的词义及用法
 
+- have /hæv/和has /hæz/均为“有”、“拥有”的意思。 
+- have在 **单三** 形式下变为has
+
 1. I have an iPhone. 
 2. You have nice lips. 
 3. He has big eyes.
@@ -12,9 +15,6 @@
 5. It has four arms.
 6. They have a beautiful house.
 7. We have a good teacher.
-
-- have /hæv/和has /hæz/均为“有”、“拥有”的意思。 
-- have在单三形式下变为has
 
 ### 判断哪些词为不可数名词以及哪些词可以用来修饰不可数名词
 
@@ -24,14 +24,14 @@
 4. We have only a little water. 
 5. She wants some oranges and sugar.
 
-不可数： 
+不可数： (举一反三)
 
 - money 集合了纸币、硬币、电子货币等在内的集体概念 
 - homework 包括各类练习题在内的集体概念 
 - 同理work也不可数 
 - sugar为小颗粒状，故不可数
 
-可修饰不可数名词的形容词：
+可修饰不可数名词的形容词：(新的生词)
 1. a lot of / lots of 皆可 
 2. much 不可数 many 可数 
 3. a few可数 a little 不可数 
@@ -40,6 +40,9 @@
 ---
 
 # 副词
+
+> 副词（Adverb 简称adv.）是指在句子中表示行为或状态特征的词，用以修饰动词、形容词、其他副词或全句，表示时间、地点、程度、方式等概念。副词可分为：时间副词、频率副词、地点副词、方式副词、程度副词、疑问副词、连接副词、关系副词、表顺序、表完成的副词
+
 英文中很多adj.词尾加上-ly后就可以变为adv.
 
 - quick → quickly 
