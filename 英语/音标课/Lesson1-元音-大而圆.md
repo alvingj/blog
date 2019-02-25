@@ -5,7 +5,7 @@
 
 > /æ/看字形就比较“大”，预示着要张大嘴。同时，发音短促有力。
 
-a发/æ/, bag  map  dads	sad  
+a发/æ/, bag  map  dad	sad  
 
 
 ## /e/
