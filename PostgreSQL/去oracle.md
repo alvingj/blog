@@ -30,22 +30,27 @@ Oracle 迁移至（PostgreSQL ）简称 PG. 有些地方两个数据库行为不
 1. Oracle 默认访问的对象都是大写的，PG数据库默认对象都是小写的。
 迁移过后，所有的表对象都自动转换成小写的。
  
-2.Oracle中有一个函数sysdate
- 
+2. Oracle中有一个函数sysdate
+```
 The Oracle SYSDATE function returns the current date and time of the Operating System (OS) where the Oracle Database installed.
 Oracle:
 select sysdate from dual;
 2020-03-13 23:53:38
- 
+```
+
 但是PG中没有这个函数：使用了这个函数替换。timestamp
 PG 时间默认显示为：日期+时间+时区
+
+```
 PG
 postgres=# select current_timestamp ;
        current_timestamp
 -------------------------------
       2020-03-13 11:50:37.920059-04
- 
+```
+
 PG表定义示例：
+```
 显示的时间比以前，多了微秒的显示。
 create table t1 (id int,datetest timestamp without time zone );
 insert into t2 values (1,current_timestamp); 
@@ -53,7 +58,7 @@ postgres=# select * from t2;
 id |          datetest
 ----+----------------------------
   1 | 2020-03-13 12:08:36.542552
- 
+```
 使用这个函数的表，大概有300张表。详情见附件。
  
 3. 关于大对象数据。Oracle 中CLOB.  PG 中没有CLOB，使用的是TEXT 数据类型替换CLOB.
@@ -64,7 +69,22 @@ id |          datetest
 4. 关于分区表：
 Oracle 中支持这样的写法：
 绿色的部分表示：如果分区表的分区键，插入了空值。就放在最后一个分区。
- 
+```
+CREATE TABLE cpd_daily_download_log (
+    id numeric NOT NULL,
+    lcaid numeric(38,0) NOT NULL,
+    package_name character varying(500) NOT NULL,
+    app_name character varying(254) NOT NULL,
+    download_date numeric(8,0) NOT NULL,
+    daily_download_num numeric(38,0) DEFAULT 0 NOT NULL,
+    price numeric(38,6) DEFAULT 0 NOT NULL,
+    total_download_num numeric(38,0) DEFAULT 0 NOT NULL
+)
+PARTITION BY RANGE (download_date) NULLS LAST;
+```
+但是PG 不支持这样的写法，也就是分区表的分区键这里必须插入值才可以。不能是空值。
+
+
 #### 迁移报告
 ![](../res/ams_qa迁移报告.png)
 
