@@ -5,8 +5,8 @@
  
 1. 文件直接存blob clob字段 
 2. 用表的字段控制流程 
-3. 一味的给表增加字段, 而不是花时间做好数据库设计
-4. 核心业务没有分库分包, 应用程序看似服务化但是数据库还是单一化
+3. 一味的给表增加字段, 而没有花时间做好数据库设计
+4. 核心业务没有分库分表, 应用程序看似服务化但是数据库还是单一化
 
 ## 选型
 替代方案考虑过mysql, 阿里云产品, 最后定下来用PostgreSQL. 
@@ -95,3 +95,10 @@ PARTITION BY RANGE (download_date) NULLS LAST;
 ### 踩坑&经验
 
 ## 资料
+1. [跟Oracle说拜拜！独家揭秘东南亚电商平台 Prestomall 去 O 全过程](https://yq.aliyun.com/articles/744878?spm=a2c4e.11155472.0.0.1c1a6ecfAJDmfT)
+
+1. [PostgreSQL与Oracle的sql差异](https://blog.csdn.net/super_tianxinmomo/article/details/81093953)
+
+1. [PostgreSql 使用自定义序列（Sequence）向表插入数据](https://blog.csdn.net/qq_37464248/article/details/82769868)
+
+1. [PostgreSQL之Sequence序列](https://www.cnblogs.com/zhenghengbin/p/9894078.html)
